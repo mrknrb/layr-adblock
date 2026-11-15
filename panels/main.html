@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ad blocker</title>
+    <link rel="stylesheet" href="/_layr/layr.css" />
+    <script src="/_layr/layr.js"></script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <header class="top">
+        <div class="shield" id="shield" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28">
+            <path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z" />
+          </svg>
+        </div>
+        <div class="title">
+          <h1>Ad blocker</h1>
+          <div class="layr-muted" id="summary">…</div>
+        </div>
+        <label class="switch" title="Block ads and trackers in every web panel">
+          <input type="checkbox" id="enabled" disabled />
+          <span></span>
+        </label>
+      </header>
+
+      <section class="stats">
+        <div class="stat"><b id="total">0</b><span class="layr-muted">blocked in all</span></div>
+        <div class="stat"><b id="rules">0</b><span class="layr-muted">rules</span></div>
+      </section>
+
+      <section>
+        <h3>Open pages</h3>
+        <ul class="layr-list lined" id="pages"></ul>
+        <p class="layr-muted empty" id="pagesEmpty">No web pages loaded yet. Open one (Ctrl+L) and come back.</p>
+      </section>
+
+      <section>
+        <h3>Paused on these sites</h3>
+        <ul class="layr-list lined" id="allow"></ul>
+        <form class="row" id="allowForm">
+          <input class="layr-input" id="allowHost" placeholder="example.com" autocomplete="off" />
+          <button class="layr-button" type="submit">Pause on site</button>
+        </form>
+      </section>
+
+      <section>
+        <div class="row head">
+          <h3>Filter lists</h3>
+          <span class="layr-spacer"></span>
+          <button class="layr-button small" id="refresh">Update now</button>
+        </div>
+        <ul class="layr-list lined" id="lists"></ul>
+        <details>
+          <summary class="layr-muted">Add a list</summary>
+          <form class="row" id="listForm">
+            <input class="layr-input" id="listName" placeholder="Name" autocomplete="off" />
+            <input class="layr-input grow" id="listUrl" placeholder="https://…/list.txt" autocomplete="off" />
+            <button class="layr-button" type="submit">Add</button>
+          </form>
+        </details>
+        <p class="layr-muted small">
+          Lists are downloaded once a week. Only network rules apply (no hiding of page parts). On Windows, browser
+          extensions such as uBlock Origin Lite can go further: see the Extensions plugin.
+        </p>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
