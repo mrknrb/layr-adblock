@@ -1,0 +1,18 @@
+{
+  "id": "adblock",
+  "name": "Ad blocker",
+  "version": "0.1.1",
+  "description": "Blocks ads and trackers in every web panel with EasyList and EasyPrivacy: on or off, per site, counters.",
+  "author": "layr",
+  "layr": "^0.1",
+  "icon": "shield",
+  "permissions": ["data", "adblock"],
+  "panels": [
+    { "id": "main", "title": "Ad blocker", "page": "panels/main.html", "icon": "shield", "single": true, "pinned": true }
+  ],
+  "commands": [{ "id": "open", "title": "Ad blocker: Open", "panel": "main" }],
+  "menus": [{ "menu": "View", "command": "open" }],
+  "statusBar": [
+    { "id": "blocked", "text": "", "icon": "shield", "tooltip": "Ad blocker", "command": "open", "alignment": "right" }
+  ]
+}
