@@ -1,4 +1,5 @@
 {
+  "repository": "https://github.com/mrknrb/layr-adblock",
   "id": "adblock",
   "name": "Ad blocker",
   "version": "0.1.1",
