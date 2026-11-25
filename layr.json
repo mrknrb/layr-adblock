@@ -2,7 +2,7 @@
   "repository": "https://github.com/mrknrb/layr-adblock",
   "id": "adblock",
   "name": "Ad blocker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Blocks ads and trackers in every web panel with EasyList and EasyPrivacy: on or off, per site, counters.",
   "author": "layr",
   "layr": "^0.1",
